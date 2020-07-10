@@ -1,11 +1,18 @@
-function add(n1: number, n2: number, showResult: boolean, phrase: string) {
-	const result = n1 + n2;
-	return showResult ? console.log(phrase + result) : result;
-}
+const person: {
+	name: string;
+	age: number;
+	hobbies: string[];
+	role: [number, string];
+} = {
+	name: 'Maximilian',
+	age: 30,
+	hobbies: ['Sports', 'Cooking'],
+	role: [2, 'author'], //tuple *watch put for .push
+};
 
-const number1 = 5;
-const number2 = 2.8;
-const printResult = true;
-const resultPhrase = 'Result is: ';
+let favoriteActivities: string[];
+favoriteActivities = ['Sports'];
 
-add(number1, number2, printResult, resultPhrase);
+console.log(person.name);
+
+person.hobbies.forEach(hobby => console.log(hobby));
