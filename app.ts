@@ -7,8 +7,10 @@ const person: {
 	name: 'Maximilian',
 	age: 30,
 	hobbies: ['Sports', 'Cooking'],
-	role: [2, 'author'], //tuple *watch put for .push
+	role: [2, 'author'], //tuple
 };
+
+// person.role.push('admin') // watch out for .push - TS will not catch err on tuples
 
 let favoriteActivities: string[];
 favoriteActivities = ['Sports'];
