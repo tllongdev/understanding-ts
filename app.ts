@@ -1,39 +1,12 @@
-// const person: {
-// 	name: string;
-// 	age: number;
-// 	hobbies: string[];
-// 	role: [number, string];
-// } = {
-// 	name: 'Maximilian',
-// 	age: 30,
-// 	hobbies: ['Sports', 'Cooking'],
-// 	role: [2, 'author'], //tuple
-// };
-
-enum Role {
-	ADMIN,
-	READ_ONLY,
-	AUTHOR,
+function combine(input1: number | string, input2: number | string) {
+	let result: number | string;
+	return typeof input1 === 'number' && typeof input2 === 'number'
+		? (result = input1 + input2)
+		: (result = input1.toString() + input2.toString());
 }
 
-const person: {
-	name: string;
-	age: number;
-	hobbies: string[];
-	role: any;
-} = {
-	name: 'Maximilian',
-	age: 30,
-	hobbies: ['Sports', 'Cooking'],
-	// role: [2, 'author'], //tuple
-	role: Role.ADMIN, //enum
-};
+const combineAges = combine(30, 26);
+console.log(combineAges);
 
-// person.role.push('admin') // watch out for .push - TS will not catch err on tuples
-
-let favoriteActivities: string[];
-favoriteActivities = ['Sports'];
-
-console.log(person.name);
-
-person.hobbies.forEach(hobby => console.log(hobby));
+const combinedNames = combine('Max', 'Anna');
+console.log(combinedNames);
