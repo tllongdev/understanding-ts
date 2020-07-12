@@ -67,11 +67,13 @@
 		"skipLibCheck": true /* Skip type checking of declaration files. */,
 		"forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */
 	},
-
-	"exclude": [
-		"node_modules" // this is set by default
-	],
+	// "exclude": [
+	// 	"node_modules" // this is set by default
+	// ],
+	// "include": [
+	// 	"app.ts" // files to be compiled
+	// ]
 	"files": [
-		"app.ts" // files to be compiled
+		"./src/app.ts" // files or folders to be compiled
 	]
 }
